@@ -1,0 +1,26 @@
+{
+  "name": "php-md5",
+  "version": "1.0.0",
+  "description": "equals to php md5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wangnan0610/php-md5.git"
+  },
+  "keywords": [
+    "php",
+    "md5"
+  ],
+  "author": "wangnan0610",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangnan0610/php-md5/issues"
+  },
+  "homepage": "https://github.com/wangnan0610/php-md5#readme",
+  "dependencies": {
+    "locutus": "^2.0.5"
+  }
+}

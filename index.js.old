@@ -1,0 +1,27 @@
+const str_split = require('locutus/php/strings/str_split'); 
+const hexdec = require('locutus/php/math/hexdec');
+const chr = require('locutus/php/strings/chr');
+const sizeof = require('locutus/php/array/sizeof');
+const md5 = require('locutus/php/strings/md5');
+
+function _hex2raw(str) {
+    const chunks = str_split(str, 2);
+    let result = '';
+
+    for (let i = 0, len = sizeof(chunks); i < len; i++) {
+        result += chr(hexdec(chunks[i]));
+    }
+
+    return result;
+}
+
+// boolen raw_output
+function phpmd5(str, raw_output) {
+    if (!raw_output) {
+        return md5(str); 
+    }
+
+    return _hex2raw(md5(str));
+} 
+
+module.exports = phpmd5;
